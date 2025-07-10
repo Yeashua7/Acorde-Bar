@@ -8,12 +8,26 @@ const bocas = [
   { nombre: "Ceviche camarón", precio: "$0.50" }
 ];
 
-// Lista de bebidas
-const drinks = [
-  "Pilsener",
-  "Golden",
-  "Regia",
+// Lista de cervezas
+const cervezas = [
+  { nombre: "Pilsener", precio: 1.50 },
+  { nombre: "Golden", precio: 1.75 },
+  { nombre: "Suprema", precio: 2.00 }
 ];
+
+function mostrarCervezas() {
+  const contenedor = document.getElementById('cervezas-menu');
+  cervezas.forEach(cerveza => {
+    const item = document.createElement('div');
+    item.className = 'cerveza-item';
+    item.innerHTML = `
+      <span class="nombre">${cerveza.nombre}</span>
+      <span class="puntos">..............................</span>
+      <span class="precio">$${cerveza.precio.toFixed(2)}</span>
+    `;
+    contenedor.appendChild(item);
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   // Render boquitas
@@ -36,16 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     bocasMenu.appendChild(div);
   });
+  
   // Cierra animación en móvil al tocar fuera
   document.body.addEventListener('touchstart', function() {
     document.querySelectorAll('.boca-item').forEach(item => item.classList.remove('active'));
   });
 
-  // Render bebidas
-  const drinksList = document.getElementById('drinks-list');
-  drinks.forEach(drink => {
-    const li = document.createElement('li');
-    li.textContent = drink;
-    drinksList.appendChild(li);
-  });
+  // Render cervezas
+  mostrarCervezas();
 });

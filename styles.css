@@ -112,30 +112,7 @@ main {
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   border-radius: 1rem;
-  padding: 1rem 1.2rem;
-  min-width: 120px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 2px 8px #0005;
-  transition: 
-    transform 0.2s,
-    box-shadow 0.2s,
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  overflow: hidden;
-}
-
-.boca-item {
-  background: #181818;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-  border-radius: 1rem;
-  padding: 1rem 1.2rem 2.2rem 1.2rem; /* más espacio abajo */
+  padding: 1rem 1.2rem 2.2rem 1.2rem;
   min-width: 120px;
   text-align: center;
   font-size: 1.1rem;
@@ -189,26 +166,43 @@ main {
   100% { opacity: 1; transform: translateY(0) scale(1);}
 }
 
-.boca-item:hover,
-.boca-item.active {
-  background: var(--accent-color);
-  color: #181818;
-  border-color: var(--red-detail);
-  transform: scale(1.08) rotate(-2deg);
-  box-shadow: 0 8px 32px #ffd70055;
-  z-index: 2;
+/* Estilos para la sección de cervezas */
+.cervezas-menu {
+  margin-bottom: 1rem;
 }
 
-.boca-item:hover .boca-price,
-.boca-item.active .boca-price {
-  opacity: 1;
-  animation: pricePop 0.5s;
+.cerveza-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  padding: 8px 0;
+  border-bottom: 1px solid #ffd70022;
 }
 
-@keyframes pricePop {
-  0% { opacity: 0; transform: translateY(10px) scale(0.8);}
-  60% { opacity: 1; transform: translateY(-4px) scale(1.1);}
-  100% { opacity: 1; transform: translateY(0) scale(1);}
+.cerveza-item .nombre {
+  font-weight: bold;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.cerveza-item .puntos {
+  flex-grow: 1;
+  text-align: center;
+  color: #666;
+  margin: 0 10px;
+  letter-spacing: 3px;
+  font-size: 0.9em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cerveza-item .precio {
+  font-weight: bold;
+  color: var(--red-detail);
+  flex-shrink: 0;
+  font-size: 1.1em;
 }
 
 ul.menu-list {
@@ -282,6 +276,15 @@ ul.menu-list li {
     padding: 0.7rem 0.7rem;
     font-size: 1rem;
   }
+  .cerveza-item {
+    font-size: 1rem;
+  }
+  .cerveza-item .nombre {
+    min-width: 70px;
+  }
+  .cerveza-item .puntos {
+    letter-spacing: 2px;
+  }
 }
 
 @keyframes fadeInUp {
@@ -291,7 +294,7 @@ ul.menu-list li {
   }
 }
 
-/* Redes sociales flotantes */
+/* Redes sociales flotantes con fondo negro */
 .social-float {
   position: fixed;
   bottom: 24px;
@@ -310,10 +313,10 @@ ul.menu-list li {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px #0005;
-  background: #181818;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  background: #181818 !important;
   border: 2px solid var(--accent-color);
   text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .social-btn svg {
@@ -323,18 +326,7 @@ ul.menu-list li {
 .social-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 32px #ffd70055;
-  background: var(--accent-color);
-}
-
-.social-btn.whatsapp:hover svg circle { fill: #128c7e; }
-.social-btn.instagram:hover svg circle { fill: #E94560; }
-.social-btn.tiktok:hover svg circle { fill: #E94560; }
-
-.social-btn.instagram, .social-btn.tiktok {
-  background: #fff;
-}
-.social-btn.instagram:hover, .social-btn.tiktok:hover {
-  background: #FFD700;
+  background: #181818 !important;
 }
 
 @media (max-width: 600px) {

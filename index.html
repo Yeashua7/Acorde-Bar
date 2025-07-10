@@ -22,50 +22,52 @@
           Plato completo: $2.50
         </div>
       </div>
-      <div class="card">
-        <h2>Cervezas</h2>
-        <ul class="menu-list" id="drinks-list">
-          <!-- Las cervezas se agregan con JavaScript -->
-        </ul>
+      
+      <!-- Sección de Cervezas -->
+      <div class="card animated-menu">
+        <h2>Nuestras Cervezas</h2>
+        <div id="cervezas-menu" class="cervezas-menu"></div>
       </div>
     </section>
 
     <!-- Sección de Ubicación -->
     <section class="location-section">
-      <h2>Ubicación</h2>
-      <p>Encuéntranos en: <strong>Tu dirección aquí</strong></p>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.857123456789!2d-89.2181916846467!3d13.69294099037847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQxJzM0LjYiTiA4OcKwMTMnMDYuNSJX!5e0!3m2!1ses-419!2ssv!4v1680000000000!5m2!1ses-419!2ssv"
-          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h2>Ubicación de nuestro bar</h2>
+      <p style="text-align:center; margin-bottom: 24px;">
+        <a href="https://maps.app.goo.gl/fbiPFiCZJ5dAe2a89" target="_blank" 
+           style="color:var(--accent-color);text-decoration:none;font-size:1.2em;display:inline-block;padding:12px 20px;background:#181818;border-radius:8px;border:2px solid var(--accent-color);transition:all 0.3s;">
+          📍 Ver nuestra ubicación en Google Maps
+        </a>
+      </p>
+      <div class="map-container" style="margin-top: 32px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3876.8548478984635!2d-89.22195052491128!3d13.66658878671641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDM5JzU5LjciTiA4OcKwMTMnMDkuOCJX!5e0!3m2!1ses-419!2ssv!4v1752116992383!5m2!1ses-419!2ssv" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
 
-  <!-- Redes sociales flotantes con íconos originales -->
+  <!-- Redes sociales flotantes con fondo negro -->
   <div class="social-float">
-    <a href="https://wa.me/tu_numero" class="social-btn whatsapp" target="_blank" title="WhatsApp" aria-label="WhatsApp">
-      <!-- WhatsApp SVG original -->
+    <a href="https://wa.me/tu_numero" class="social-btn" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+      <!-- WhatsApp SVG -->
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="16" fill="#25D366"/>
-        <path d="M16 7.2c-4.9 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5l-1.3 4.7 4.8-1.3c1.3.7 2.7 1.1 4.1 1.1 4.9 0 8.8-3.9 8.8-8.8S20.9 7.2 16 7.2zm0 15.8c-1.3 0-2.6-.3-3.7-.9l-.3-.2-2.8.8.8-2.7-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-4 3.3-7.3 7.3-7.3s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3zm4-5.2c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.6.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.4.2-.1.2-.5.5-.5 1.2 0 .7.5 1.4.6 1.5.1.1 1.1 1.7 2.7 2.3.4.2.7.3 1 .4.4.1.7.1 1 .1.3 0 .6-.1.7-.3.2-.2.5-.5.6-.7.1-.2.1-.3.1-.4 0-.1-.1-.2-.2-.3z" fill="#fff"/>
+        <circle cx="16" cy="16" r="16" fill="#181818"/>
+        <path d="M16 7.2c-4.9 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5l-1.3 4.7 4.8-1.3c1.3.7 2.7 1.1 4.1 1.1 4.9 0 8.8-3.9 8.8-8.8S20.9 7.2 16 7.2zm0 15.8c-1.3 0-2.6-.3-3.7-.9l-.3-.2-2.8.8.8-2.7-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-4 3.3-7.3 7.3-7.3s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3zm4-5.2c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.6.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.4.2-.1.2-.5.5-.5 1.2 0 .7.5 1.4.6 1.5.1.1 1.1 1.7 2.7 2.3.4.2.7.3 1 .4.4.1.7.1 1 .1.3 0 .6-.1.7-.3.2-.2.5-.5.6-.7.1-.2.1-.3.1-.4 0-.1-.1-.2-.2-.3z" fill="#25D366"/>
       </svg>
     </a>
-    <a href="https://instagram.com/tu_usuario" class="social-btn instagram" target="_blank" title="Instagram" aria-label="Instagram">
-      <!-- Instagram SVG original -->
+    <a href="https://instagram.com/tu_usuario" class="social-btn" target="_blank" title="Instagram" aria-label="Instagram">
+      <!-- Instagram SVG -->
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="16" fill="#fff"/>
-        <rect x="8" y="8" width="16" height="16" rx="5" fill="#fff"/>
-        <rect x="10" y="10" width="12" height="12" rx="4" fill="#262626"/>
-        <circle cx="16" cy="16" r="3.5" stroke="#fff" stroke-width="2"/>
-        <circle cx="21.5" cy="10.5" r="1.5" fill="#fff"/>
+        <circle cx="16" cy="16" r="16" fill="#181818"/>
+        <rect x="8" y="8" width="16" height="16" rx="5" fill="#181818"/>
+        <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/>
+        <circle cx="16" cy="16" r="3.5" stroke="#181818" stroke-width="2"/>
+        <circle cx="21.5" cy="10.5" r="1.5" fill="#181818"/>
       </svg>
     </a>
-    <a href="https://tiktok.com/@tu_usuario" class="social-btn tiktok" target="_blank" title="TikTok" aria-label="TikTok">
-      <!-- TikTok SVG original -->
+    <a href="https://tiktok.com/@tu_usuario" class="social-btn" target="_blank" title="TikTok" aria-label="TikTok">
+      <!-- TikTok SVG -->
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <circle cx="16" cy="16" r="16" fill="#000"/>
+        <circle cx="16" cy="16" r="16" fill="#181818"/>
         <path d="M22.5 13.5c-1.7 0-3-1.3-3-3V8h-2.2v10.2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4-.1-.6-.1-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-3.2c.6.4 1.3.7 2 .7h.6v-2.2h-.6z" fill="#fff"/>
         <path d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z" fill="#25F4EE"/>
         <path d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z" fill="#FE2C55" fill-opacity="0.7"/>

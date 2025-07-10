@@ -10,9 +10,9 @@ const bocas = [
 
 // Lista de cervezas
 const cervezas = [
-  { nombre: "Pilsener", precio: 1.50 },
-  { nombre: "Golden", precio: 1.75 },
-  { nombre: "Suprema", precio: 2.00 }
+  { nombre: "Pilsener", precio: 1.25 },
+  { nombre: "Golden", precio: 1.25 },
+  { nombre: "Suprema", precio: 1.25 }
 ];
 
 function mostrarCervezas() {

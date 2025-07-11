@@ -22,9 +22,9 @@ function mostrarCervezas() {
     const item = document.createElement('div');
     item.className = 'cerveza-item';
     item.innerHTML = `
-      <span class="nombre">${cerveza.nombre}</span>
-      <span class="puntos">..............................</span>
-      <span class="precio">$${cerveza.precio.toFixed(2)}</span>
+    <span class="nombre">${cerveza.nombre}</span>
+    <span class="puntos">....</span>
+    <span class="precio">$${cerveza.precio.toFixed(2)}</span>
     `;
     contenedor.appendChild(item);
   });
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.createElement('div');
     div.className = 'boca-item';
     div.innerHTML = `
-      <span class="boca-nombre">${boca.nombre}</span>
-      <span class="boca-price">${boca.precio}</span>
+    <span class="boca-nombre">${boca.nombre}</span>
+    <span class="boca-price">${boca.precio}</span>
     `;
     // Animación en hover/click
     div.addEventListener('mouseenter', () => div.classList.add('active'));

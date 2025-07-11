@@ -205,6 +205,13 @@ main {
   font-size: 1.1em;
 }
 
+.prices {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
 ul.menu-list {
   list-style: none;
   margin-bottom: 1rem;
@@ -214,13 +221,6 @@ ul.menu-list li {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ffd70033;
   font-size: 1.1rem;
-}
-
-.prices {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: var(--accent-color);
-  text-align: center;
 }
 
 .location-section {
@@ -273,7 +273,7 @@ ul.menu-list li {
   }
   .boca-item {
     min-width: 90px;
-    padding: 0.7rem 0.7rem;
+    padding: 0.7rem 0.7rem 1.7rem 0.7rem; /* padding-bottom más grande para móviles */
     font-size: 1rem;
   }
   .cerveza-item {

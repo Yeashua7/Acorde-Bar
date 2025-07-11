@@ -1,11 +1,11 @@
 // Menú de boquitas dinámico
 const bocas = [
-  { nombre: "Carne oreada", precio: "$0.50" },
-  { nombre: "Carne ahumada", precio: "$0.50" },
-  { nombre: "Chorizo", precio: "$0.50" },
-  { nombre: "Queso frito", precio: "$0.50" },
-  { nombre: "Sopa", precio: "$0.50" },
-  { nombre: "Ceviche camarón", precio: "$0.50" }
+  { nombre: "Carne oreada", precio: "$1.00" },
+  { nombre: "Carne ahumada", precio: "$1.00" },
+  { nombre: "Chorizo", precio: "$1.00" },
+  { nombre: "Queso frito", precio: "$1.00" },
+  { nombre: "Sopa", precio: "$1.00" },
+  { nombre: "Ceviche camarón", precio: "$1.00" }
 ];
 
 // Lista de cervezas

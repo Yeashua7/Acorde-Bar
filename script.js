@@ -12,7 +12,8 @@ const bocas = [
 const cervezas = [
   { nombre: "Pilsener", precio: 1.25 },
   { nombre: "Golden", precio: 1.25 },
-  { nombre: "Suprema", precio: 1.25 }
+  { nombre: "Suprema", precio: 1.25 },
+  { nombre: "Agua", precio: 1.00}
 ];
 
 function mostrarCervezas() {

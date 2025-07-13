@@ -99,7 +99,8 @@ main {
   text-shadow: 1px 1px 8px #000a;
 }
 
-.bocas-menu {
+.bocas-menu,
+.cervezas-menu {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -107,7 +108,8 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.boca-item {
+.boca-item,
+.cerveza-item {
   background: #181818;
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
@@ -130,7 +132,8 @@ main {
   overflow: hidden;
 }
 
-.boca-item .boca-price {
+.boca-item .boca-price,
+.cerveza-item .cerveza-price {
   opacity: 0;
   position: absolute;
   left: 0; right: 0;
@@ -144,7 +147,9 @@ main {
 }
 
 .boca-item:hover,
-.boca-item.active {
+.boca-item.active,
+.cerveza-item:hover,
+.cerveza-item.active {
   background: var(--accent-color);
   color: #181818;
   border-color: var(--red-detail);
@@ -154,7 +159,9 @@ main {
 }
 
 .boca-item:hover .boca-price,
-.boca-item.active .boca-price {
+.boca-item.active .boca-price,
+.cerveza-item:hover .cerveza-price,
+.cerveza-item.active .cerveza-price {
   opacity: 1;
   transform: translateY(0);
   animation: pricePop 0.5s;
@@ -164,45 +171,6 @@ main {
   0% { opacity: 0; transform: translateY(30px) scale(0.8);}
   60% { opacity: 1; transform: translateY(-4px) scale(1.1);}
   100% { opacity: 1; transform: translateY(0) scale(1);}
-}
-
-/* Estilos para la sección de cervezas */
-.cervezas-menu {
-  margin-bottom: 1rem;
-}
-
-.cerveza-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  font-size: 1.1em;
-  padding: 8px 0;
-  border-bottom: 1px solid #ffd70022;
-}
-
-.cerveza-item .nombre {
-  font-weight: bold;
-  color: var(--accent-color);
-  flex-shrink: 0;
-  min-width: 80px;
-}
-
-.cerveza-item .puntos {
-  flex-grow: 1;
-  text-align: center;
-  color: #666;
-  margin: 0 10px;
-  letter-spacing: 3px;
-  font-size: 0.9em;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.cerveza-item .precio {
-  font-weight: bold;
-  color: var(--red-detail);
-  flex-shrink: 0;
-  font-size: 1.1em;
 }
 
 .prices {
@@ -268,22 +236,15 @@ ul.menu-list li {
     padding: 1rem 0.5rem;
     max-width: 98%;
   }
-  .bocas-menu {
+  .bocas-menu,
+  .cervezas-menu {
     gap: 0.5rem;
   }
-  .boca-item {
-    min-width: 90px;
-    padding: 0.7rem 0.7rem 1.7rem 0.7rem; /* padding-bottom más grande para móviles */
-    font-size: 1rem;
-  }
+  .boca-item,
   .cerveza-item {
+    min-width: 90px;
+    padding: 0.7rem 0.7rem 1.7rem 0.7rem;
     font-size: 1rem;
-  }
-  .cerveza-item .nombre {
-    min-width: 70px;
-  }
-  .cerveza-item .puntos {
-    letter-spacing: 2px;
   }
 }
 

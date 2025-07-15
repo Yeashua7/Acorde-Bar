@@ -1,20 +1,19 @@
 // Menú de boquitas dinámico
 const bocas = [
-  { nombre: "Carne oreada", precio: "$1.25" },
-  { nombre: "Carne ahumada", precio: "$1.25" },
-  { nombre: "Chorizo", precio: "$1.25" },
-  { nombre: "Queso frito", precio: "$1.25" },
-  { nombre: "Sopa", precio: "$1.25" },
-  { nombre: "Ceviche camarón", precio: "$1.25" }
+  { nombre: "Costilla ahumada", precio: "$1.30" },
+  { nombre: "Ceviche camarón", precio: "$1.30" },
+  { nombre: "Carne oreada", precio: "$1.30" },
+  { nombre: "Chorizo de tusa", precio: "$1.30" },
+  { nombre: "Queso frito", precio: "$1.30" },
+  { nombre: "Sopa", precio: "$1.30" }
 ];
 
 // Lista de cervezas
 const cervezas = [
-  { nombre: "Pilsener", precio: 1.25 },
-  { nombre: "Golden", precio: 1.25 },
-  { nombre: "Suprema", precio: 1.25 },
-  { nombre: "Agua", precio: 1.25},
-  { nombre: "Coca Cola", precio: 1.25 },
+  { nombre: "Pilsener", precio: 1.30 },
+  { nombre: "Golden", precio: 1.30 },
+  { nombre: "Botella con Agua", precio: 1.30},
+  { nombre: "Coca-Cola", precio: 1.30 },
 ];
 
 function mostrarCervezas() {

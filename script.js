@@ -9,12 +9,12 @@ const bocas = [
 
 // Lista de cervezas
 const cervezas = [
-  { nombre: "Pilsener 330ml", precio: 1.25 },
-  { nombre: "Pilsener 750ml", precio: 2.25 },
-  { nombre: "Pilsener 1.2L", precio: 3.25 },
-  { nombre: "Golden Light 292ml", precio: 1.25 },
-  { nombre: "Botella con Agua", precio: 1.25},
-  { nombre: "Coca-Cola", precio: 1.25 },
+  { nombre: "Pilsener 330ml", precio: 1.50 },
+  { nombre: "Pilsener 750ml", precio: 2.50 },
+  { nombre: "Pilsener 1.2L", precio: 3.50 },
+  { nombre: "Golden Light 292ml", precio: 1.50 },
+  { nombre: "Botella con Agua", precio: 1.00},
+  { nombre: "Coca-Cola", precio: 1.00 },
 ];
 
 function mostrarCervezas() {

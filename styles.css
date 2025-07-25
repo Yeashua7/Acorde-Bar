@@ -215,6 +215,12 @@ ul.menu-list li {
   text-shadow: 1px 1px 8px #000a;
 }
 
+/* Estilos para los botones de ubicación */
+.location-section a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .map-container {
   width: 100%;
   border-radius: 1rem;
@@ -245,6 +251,20 @@ ul.menu-list li {
     min-width: 90px;
     padding: 0.7rem 0.7rem 1.7rem 0.7rem;
     font-size: 1rem;
+  }
+}
+
+/* Responsividad para los botones de ubicación en móviles */
+@media (max-width: 768px) {
+  .location-section div[style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  
+  .location-section a {
+    width: 80% !important;
+    text-align: center;
+    margin-bottom: 8px;
   }
 }
 

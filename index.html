@@ -1,89 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACORDES GASTRO BAR</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <img src="img/Gastro Bar.png" alt="Logo for Acordes Gastro Bar featuring a large glass of beer with a foamy head next to a red guitar and musical notes. The text Acordes appears in bold script with Gastro Bar in red capital letters. The background is light, creating a lively and welcoming atmosphere that suggests music and relaxation.">
-    <h1>ACORDES GASTRO BAR</h1>
-    <p class="slogan">"El compás perfecto para tu relax"</p>
-  </header>
-  <main>
-    <section class="menu-section">
-    <!-- Ahora primero las bebidas -->
-    <div class="card animated-menu">
-    <h2>Nuestras Notas Cerveceras</h2>
-    <div id="cervezas-menu" class="cervezas-menu"></div>
-    </div>
-    <!-- Después las boquitas -->
-    <div class="card animated-menu">
-    <h2>Nuestras Notas Botaneras</h2>
-    <div id="bocas-menu" class="bocas-menu"></div>
-    <div class="prices">
-    Plato de bocas: $5.00
-    <br>4 Boquitas
-    </div>
-    </div>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACORDES GASTRO BAR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        src="img/Gastro Bar.png"
+        alt="Logo for Acordes Gastro Bar featuring a large glass of beer with a foamy head next to a red guitar and musical notes. The text Acordes appears in bold script with Gastro Bar in red capital letters. The background is light, creating a lively and welcoming atmosphere that suggests music and relaxation."
+      />
+      <h1>ACORDES GASTRO BAR</h1>
+      <p class="slogan">"El compás perfecto para tu relax"</p>
+    </header>
+    <main>
+      <section class="menu-section">
+        <!-- Ahora primero las bebidas -->
+        <div class="card animated-menu">
+          <h2>Nuestras Notas Cerveceras</h2>
+          <div id="cervezas-menu" class="cervezas-menu"></div>
+        </div>
+        <!-- Después las boquitas -->
+        <div class="card animated-menu">
+          <h2>Nuestras Notas Botaneras</h2>
+          <div id="bocas-menu" class="bocas-menu"></div>
+          <div class="prices">
+            Plato de bocas: $5.00
+            <br />4 Boquitas
+          </div>
+        </div>
+      </section>
 
-    <!-- Sección de Ubicación -->
-    <section class="location-section">
-      <h2>Ubicación de nuestro bar</h2>
-      
-      <!-- Botones de navegación -->
-      <div style="text-align:center; margin-bottom: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://maps.app.goo.gl/fbiPFiCZJ5dAe2a89" target="_blank" 
-           style="color:var(--accent-color);text-decoration:none;font-size:1.1em;display:inline-block;padding:12px 20px;background:#181818;border-radius:8px;border:2px solid var(--accent-color);transition:all 0.3s;">
-          📍 Ver en Google Maps
-        </a>
-        
-        <a href="https://waze.com/ul?ll=13.666516,-89.219360&navigate=yes" target="_blank" 
-           style="color:#00d4ff;text-decoration:none;font-size:1.1em;display:inline-block;padding:12px 20px;background:#181818;border-radius:8px;border:2px solid #00d4ff;transition:all 0.3s;">
-          🚗 Navegar con Waze
-        </a>
-      </div>
-      
-      <div class="map-container" style="margin-top: 32px;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d587.8782668326655!2d-89.2193682!3d13.6663058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331ba5b08ba19%3A0x24fc30ecda00122c!2sAcordes%20Gastro%20Bar!5e1!3m2!1ses-419!2ssv!4v1753403274890!5m2!1ses-419!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
+      <!-- Sección de Ubicación -->
+      <section class="location-section">
+        <h2>Ubicación de nuestro bar</h2>
 
-  <!-- Redes sociales flotantes con fondo negro -->
-  <div class="social-float">
-    <a href="https://wa.me/50379370883" class="social-btn" target="_blank" title="WhatsApp" aria-label="WhatsApp">
-    <!-- WhatsApp SVG -->
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-    <circle cx="16" cy="16" r="16" fill="#181818"/>
-    <path d="M16 7.2c-4.9 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5l-1.3 4.7 4.8-1.3c1.3.7 2.7 1.1 4.1 1.1 4.9 0 8.8-3.9 8.8-8.8S20.9 7.2 16 7.2zm0 15.8c-1.3 0-2.6-.3-3.7-.9l-.3-.2-2.8.8.8-2.7-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-4 3.3-7.3 7.3-7.3s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3zm4-5.2c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.6.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.4.2-.1.2-.5.5-.5 1.2 0 .7.5 1.4.6 1.5.1.1 1.1 1.7 2.7 2.3.4.2.7.3 1 .4.4.1.7.1 1 .1.3 0 .6-.1.7-.3.2-.2.5-.5.6-.7.1-.2.1-.3.1-.4 0-.1-.1-.2-.2-.3z" fill="#25D366"/>
-    </svg>
-    </a>
-    <a href="https://www.instagram.com/acordesgastrobarsv/" class="social-btn" target="_blank" title="Instagram" aria-label="Instagram">
-    <!-- Instagram SVG -->
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-    <circle cx="16" cy="16" r="16" fill="#181818"/>
-    <rect x="8" y="8" width="16" height="16" rx="5" fill="#181818"/>
-    <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/>
-    <circle cx="16" cy="16" r="3.5" stroke="#181818" stroke-width="2"/>
-    <circle cx="21.5" cy="10.5" r="1.5" fill="#181818"/>
-    </svg>
-    </a>
-    <a href="https://www.tiktok.com/@acordesgastrobarsv?lang=es" class="social-btn" target="_blank" title="TikTok" aria-label="TikTok">
-    <!-- TikTok SVG -->
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-    <circle cx="16" cy="16" r="16" fill="#181818"/>
-    <path d="M22.5 13.5c-1.7 0-3-1.3-3-3V8h-2.2v10.2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4-.1-.6-.1-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-3.2c.6.4 1.3.7 2 .7h.6v-2.2h-.6z" fill="#fff"/>
-    <path d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z" fill="#25F4EE"/>
-    <path d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z" fill="#FE2C55" fill-opacity="0.7"/>
-    </svg>
-    </a>
-  </div>
+        <!-- Botones de navegación -->
+        <div
+          style="
+            text-align: center;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="https://maps.app.goo.gl/fbiPFiCZJ5dAe2a89"
+            target="_blank"
+            style="
+              color: var(--accent-color);
+              text-decoration: none;
+              font-size: 1.1em;
+              display: inline-block;
+              padding: 12px 20px;
+              background: #181818;
+              border-radius: 8px;
+              border: 2px solid var(--accent-color);
+              transition: all 0.3s;
+            "
+          >
+            📍 Ver en Google Maps
+          </a>
 
-  <script src="script.js"></script>
-</body>
+          <a
+            href="https://waze.com/ul?ll=13.666516,-89.219360&navigate=yes"
+            target="_blank"
+            style="
+              color: #00d4ff;
+              text-decoration: none;
+              font-size: 1.1em;
+              display: inline-block;
+              padding: 12px 20px;
+              background: #181818;
+              border-radius: 8px;
+              border: 2px solid #00d4ff;
+              transition: all 0.3s;
+            "
+          >
+            🚗 Navegar con Waze
+          </a>
+        </div>
+
+        <div class="map-container" style="margin-top: 32px">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d587.8782668326655!2d-89.2193682!3d13.6663058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331ba5b08ba19%3A0x24fc30ecda00122c!2sAcordes%20Gastro%20Bar!5e1!3m2!1ses-419!2ssv!4v1753403274890!5m2!1ses-419!2ssv"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Redes sociales flotantes con fondo negro -->
+    <style>
+      /* Estilos para hacer los iconos más visibles */
+      .social-float {
+        position: fixed;
+        right: 16px;
+        bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 9999;
+        align-items: center;
+      }
+      .social-btn {
+        width: 56px;
+        height: 56px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+        transition: transform 0.16s ease, box-shadow 0.16s ease;
+      }
+      .social-btn:hover {
+        transform: translateY(-4px) scale(1.06);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
+      }
+      .social-btn svg {
+        width: 48px;
+        height: 48px;
+        display: block;
+      }
+    </style>
+
+    <div class="social-float">
+      <a
+        href="https://wa.me/50379370883"
+        class="social-btn"
+        target="_blank"
+        title="WhatsApp"
+        aria-label="WhatsApp"
+        style="background: transparent"
+      >
+        <!-- WhatsApp SVG - fondo verde, icono blanco -->
+        <svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="16" cy="16" r="16" fill="#25D366" />
+          <path
+            d="M16 7.2c-4.9 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5l-1.3 4.7 4.8-1.3c1.3.7 2.7 1.1 4.1 1.1 4.9 0 8.8-3.9 8.8-8.8S20.9 7.2 16 7.2zm0 15.8c-1.3 0-2.6-.3-3.7-.9l-.3-.2-2.8.8.8-2.7-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-4 3.3-7.3 7.3-7.3s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3zm4-5.2c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.6.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.4.2-.1.2-.5.5-.5 1.2 0 .7.5 1.4.6 1.5.1.1 1.1 1.7 2.7 2.3.4.2.7.3 1 .4.4.1.7.1 1 .1.3 0 .6-.1.7-.3.2-.2.5-.5.6-.7.1-.2.1-.3.1-.4 0-.1-.1-.2-.2-.3z"
+            fill="#fff"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.instagram.com/acordesgastrobarsv/"
+        class="social-btn"
+        target="_blank"
+        title="Instagram"
+        aria-label="Instagram"
+        style="background: transparent"
+      >
+        <!-- Instagram SVG - fondo rosa/naranja para contraste -->
+        <svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="16" cy="16" r="16" fill="#E1306C" />
+          <rect
+            x="8"
+            y="8"
+            width="16"
+            height="16"
+            rx="5"
+            fill="#E1306C"
+            opacity="0.0"
+          />
+          <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff" />
+          <circle
+            cx="16"
+            cy="16"
+            r="3.5"
+            stroke="#E1306C"
+            stroke-width="2"
+            fill="none"
+          />
+          <circle cx="21.5" cy="10.5" r="1.5" fill="#E1306C" />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.facebook.com/profile.php?id=61582104076843"
+        class="social-btn"
+        target="_blank"
+        title="Facebook"
+        aria-label="Facebook"
+        style="background: transparent"
+      >
+        <!-- Facebook SVG - azul oficial, icono blanco -->
+        <svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="16" cy="16" r="16" fill="#1877F2" />
+          <path
+            d="M20 10h-2c-1.1 0-2 .9-2 2v1h4l-.5 3H16v8h-3v-8h-2v-3h2v-1.8C13 11.4 14.1 10 16.5 10 18 10 19.5 10 20 10z"
+            fill="#fff"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@acordesgastrobarsv?lang=es"
+        class="social-btn"
+        target="_blank"
+        title="TikTok"
+        aria-label="TikTok"
+        style="background: transparent"
+      >
+        <!-- TikTok SVG - fondo oscuro, icono con colores -->
+        <svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <circle cx="16" cy="16" r="16" fill="#000" />
+          <path
+            d="M22.5 13.5c-1.7 0-3-1.3-3-3V8h-2.2v10.2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4-.1-.6-.1-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-3.2c.6.4 1.3.7 2 .7h.6v-2.2h-.6z"
+            fill="#fff"
+          />
+          <path
+            d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z"
+            fill="#25F4EE"
+          />
+          <path
+            d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z"
+            fill="#FE2C55"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

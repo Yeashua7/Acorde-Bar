@@ -3,7 +3,7 @@ const bocas = [
   { nombre: "Lomito ahumado", precio: "$1.50" },
   { nombre: "Ceviche camarón", precio: "$1.50" },
   { nombre: "Alitas", precio: "$1.50" },
-  { nombre: "Chorizo de tusa", precio: "$1.50" },
+  { nombre: "Costilla Ahumada", precio: "$1.50" },
 ];
 
 // Lista de cervezas
@@ -11,6 +11,7 @@ const cervezas = [
   { nombre: "Pilsener 330ml", precio: 1.50 },
   { nombre: "Pilsener 750ml", precio: 2.50 },
   { nombre: "Pilsener 1.2L", precio: 3.50 },
+  { nombre: "Regia Lata 475ml", precio: 1.75 },
   { nombre: "Golden Light 292ml", precio: 1.50 },
   { nombre: "Botella con Agua", precio: 1.00},
   { nombre: "Coca-Cola", precio: 1.00 },

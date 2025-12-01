@@ -325,3 +325,61 @@ ul.menu-list li {
     height: 22px;
   }
 }
+/* Estilos para la sección de precios mejorada */
+.price-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-highlight span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.price-highlight strong {
+  font-size: 2rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.prices small {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Estilos para el Footer */
+footer {
+  background: var(--main-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 2px solid var(--accent-color);
+}
+
+footer p {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

@@ -2,7 +2,6 @@
 const bocas = [
   { nombre: "Lomito ahumado", precio: "$1.50" },
   { nombre: "Ceviche camarón", precio: "$1.50" },
-  { nombre: "Alitas", precio: "$1.50" },
   { nombre: "Costilla Ahumada", precio: "$1.50" },
 ];
 

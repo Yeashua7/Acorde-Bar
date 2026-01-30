@@ -1,74 +1,79 @@
-// Menú de boquitas dinámico
-const bocas = [
-  { nombre: "Lomito ahumado", precio: "$1.50" },
-  { nombre: "Ceviche camarón", precio: "$1.50" },
-  { nombre: "Costilla Ahumada", precio: "$1.50" },
+// Menú de Comida (Leña y Barro)
+const platos = [
+  { nombre: "Sopa de Gallina India", precio: "$6.00", descripcion: "Cocida en olla de barro con vegetales frescos." },
+  { nombre: "Carne Guisada", precio: "$5.50", descripcion: "Guiso especial de la casa cocinado a la leña." },
+  { nombre: "Costilla de Cerdo", precio: "$7.00", descripcion: "Ahumada a la leña con salsa barbacoa casera." },
+  { nombre: "Frijoles de la Olla", precio: "$4.00", descripcion: "Servidos con arroz, queso y tortillas a mano." },
+  { nombre: "Churrasco Típico", precio: "$8.00", descripcion: "Carne asada a la leña con chirmol y chorizo." },
 ];
 
-// Lista de cervezas
-const cervezas = [
+// Lista de Bebidas
+const bebidas = [
+  { nombre: "Horchata de Morro", precio: 1.50 },
+  { nombre: "Refresco de Chan", precio: 1.50 },
+  { nombre: "Café de Palo", precio: 1.25 },
+  { nombre: "Chocolate En Barro", precio: 1.75 },
   { nombre: "Pilsener 330ml", precio: 1.50 },
   { nombre: "Pilsener 750ml", precio: 2.50 },
-  { nombre: "Pilsener 1.2L", precio: 3.50 },
-  { nombre: "Regia Lata 475ml", precio: 1.75 },
-  { nombre: "Golden Light 292ml", precio: 1.50 },
-  { nombre: "Botella con Agua", precio: 1.00},
   { nombre: "Coca-Cola", precio: 1.00 },
 ];
 
-function mostrarCervezas() {
-  const contenedor = document.getElementById('cervezas-menu');
-  cervezas.forEach(cerveza => {
+function mostrarBebidas() {
+  const contenedor = document.getElementById('bebidas-menu');
+  if (!contenedor) return;
+  
+  bebidas.forEach(bebida => {
     const div = document.createElement('div');
-    div.className = 'cerveza-item';
+    div.className = 'menu-item bebida-item';
     div.innerHTML = `
-      <span class="cerveza-nombre">${cerveza.nombre}</span>
-      <span class="cerveza-price">$${cerveza.precio.toFixed(2)}</span>
+      <span class="item-nombre">${bebida.nombre}</span>
+      <span class="item-price">$${bebida.precio.toFixed(2)}</span>
     `;
     // Animación en hover/click
     div.addEventListener('mouseenter', () => div.classList.add('active'));
     div.addEventListener('mouseleave', () => div.classList.remove('active'));
-    // Para móvil: toggle al tocar
+    // Para móvil
     div.addEventListener('touchstart', function(e) {
       e.stopPropagation();
-      document.querySelectorAll('.cerveza-item').forEach(item => item.classList.remove('active'));
+      document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
       div.classList.add('active');
     });
     contenedor.appendChild(div);
   });
-  // Cierra animación en móvil al tocar fuera
-  document.body.addEventListener('touchstart', function() {
-    document.querySelectorAll('.cerveza-item').forEach(item => item.classList.remove('active'));
+}
+
+function mostrarPlatos() {
+  const contenedor = document.getElementById('platos-menu');
+  if (!contenedor) return;
+
+  platos.forEach(plato => {
+    const div = document.createElement('div');
+    div.className = 'menu-item plato-item';
+    div.innerHTML = `
+      <div class="plato-info">
+        <span class="item-nombre">${plato.nombre}</span>
+        <small class="item-desc">${plato.descripcion || ''}</small>
+      </div>
+      <span class="item-price">${plato.precio}</span>
+    `;
+    
+    div.addEventListener('mouseenter', () => div.classList.add('active'));
+    div.addEventListener('mouseleave', () => div.classList.remove('active'));
+    div.addEventListener('touchstart', function(e) {
+      e.stopPropagation();
+      document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+      div.classList.add('active');
+    });
+    contenedor.appendChild(div);
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Render boquitas
-  const bocasMenu = document.getElementById('bocas-menu');
-  bocas.forEach(boca => {
-    const div = document.createElement('div');
-    div.className = 'boca-item';
-    div.innerHTML = `
-      <span class="boca-nombre">${boca.nombre}</span>
-      <span class="boca-price">${boca.precio}</span>
-    `;
-    // Animación en hover/click
-    div.addEventListener('mouseenter', () => div.classList.add('active'));
-    div.addEventListener('mouseleave', () => div.classList.remove('active'));
-    // Para móvil: toggle al tocar
-    div.addEventListener('touchstart', function(e) {
-      e.stopPropagation();
-      document.querySelectorAll('.boca-item').forEach(item => item.classList.remove('active'));
-      div.classList.add('active');
-    });
-    bocasMenu.appendChild(div);
-  });
+  mostrarPlatos();
+  mostrarBebidas();
 
   // Cierra animación en móvil al tocar fuera
   document.body.addEventListener('touchstart', function() {
-    document.querySelectorAll('.boca-item').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
   });
-
-  // Render cervezas
-  mostrarCervezas();
 });

@@ -1,283 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACORDES GASTRO DRINK | El compás perfecto para tu relax</title>
-  <meta name="description" content="Disfruta de las mejores cervezas y boquitas en Acordes Gastro Bar. Un ambiente relajado con buena música y excelente compañía. ¡Visítanos!" />
-  
+  <title>ACORDES FIRE & CLAY | Sabor Casero en Leña y Barro</title>
+  <meta name="description"
+    content="Disfruta del auténtico sabor casero cocinado en leña y olla de barro. Sopa de gallina, carne guisada y más en Acordes Fire & Clay Kitchen." />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ACORDES GASTRO DRINK" />
-  <meta property="og:description" content="El compás perfecto para tu relax. Cervezas bien frías y las mejores boquitas." />
-  <meta property="og:image" content="https://acordesbar.com/img/Gastro%20Bar.png" /> <!-- URL absoluta idealmente, placeholder por ahora si no hay dominio -->
+  <meta property="og:title" content="ACORDES FIRE & CLAY KITCHEN" />
+  <meta property="og:description" content="Cocina a la leña y olla de barro, típico sabor casero." />
+  <meta property="og:image" content="https://acordesbar.com/img/Gastro%20Bar.png" />
+  <!-- Mantener o actualizar si hay nueva URL -->
 
-  <!-- Ícono del sitio (favicon) -->
   <link rel="icon" type="image/png" href="img/favicon2.png" />
-
   <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts: Montserrat for headers, Roboto/Merriweather for body -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap"
-    rel="stylesheet"
-  />
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Montserrat:wght@700&family=Roboto&display=swap"
+    rel="stylesheet" />
 </head>
 
-  <body>
-    <header>
-      <img
-        src="img/Gastro Bar.png"
-        alt="Logo de Acordes Gastro Bar - Cerveza y música"
-      />
-      <h1>ACORDES GASTRO DRINK</h1>
-      <p class="slogan">"El compás perfecto para tu relax"</p>
-    </header>
-    <main>
-      <section class="menu-section">
-        <!-- Ahora primero las bebidas -->
-        <div class="card animated-menu">
-          <h2>Nuestras Notas Cerveceras</h2>
-          <div id="cervezas-menu" class="cervezas-menu"></div>
-        </div>
-        <!-- Después las boquitas -->
-        <div class="card animated-menu">
-          <h2>Nuestras Notas Botaneras</h2>
-          <div id="bocas-menu" class="bocas-menu"></div>
-          <div class="prices">
-            <div class="price-highlight">
-              <span>Plato de bocas</span>
-              <strong>$5.00</strong>
-            </div>
-            <small>Incluye 4 Boquitas</small>
-          </div>
-        </div>
-      </section>
+<body>
+  <header>
+    <img src="img/logo_new.png" alt="Logo Acordes Fire & Clay Kitchen" />
+    <!-- H1 is hidden in CSS but good for SEO -->
+    <h1>Acordes Fire & Clay Kitchen</h1>
+    <p class="slogan">"¡Fuego Real, Sabor Auténtico!"</p>
+  </header>
 
-      <!-- Sección de Ubicación -->
-      <section class="location-section">
-        <h2>Ubicación de nuestro bar</h2>
+  <!-- Banner de Solo Para Llevar -->
+  <div class="delivery-banner">
+    Solo para llevar &bull; Delivery &bull; Pick Up
+  </div>
 
-        <!-- Botones de navegación -->
-        <div
-          style="
-            text-align: center;
-            margin-bottom: 24px;
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-          "
-        >
-          <a
-            href="https://maps.app.goo.gl/fbiPFiCZJ5dAe2a89"
-            target="_blank"
-            style="
-              color: var(--accent-color);
-              text-decoration: none;
-              font-size: 1.1em;
-              display: inline-block;
-              padding: 12px 20px;
-              background: #181818;
-              border-radius: 8px;
-              border: 2px solid var(--accent-color);
-              transition: all 0.3s;
-            "
-          >
-            📍 Ver en Google Maps
-          </a>
+  <main>
+    <!-- New Experience Section -->
+    <section class="experience-section">
+      <h2>Nuestra Esencia</h2>
+      <p>
+        En <strong>Acordes Fire & Clay</strong>, la leña es el ingrediente secreto.
+        Cocinamos lentamente en ollas de barro para traerte ese sabor ahumado y nostálgico
+        que te hará sentir como en casa.
+      </p>
+    </section>
 
-          <a
-            href="https://waze.com/ul?ll=13.666516,-89.219360&navigate=yes"
-            target="_blank"
-            style="
-              color: #00d4ff;
-              text-decoration: none;
-              font-size: 1.1em;
-              display: inline-block;
-              padding: 12px 20px;
-              background: #181818;
-              border-radius: 8px;
-              border: 2px solid #00d4ff;
-              transition: all 0.3s;
-            "
-          >
-            🚗 Navegar con Waze
-          </a>
-        </div>
-
-        <div class="map-container" style="margin-top: 32px">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d587.8782668326655!2d-89.2193682!3d13.6663058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331ba5b08ba19%3A0x24fc30ecda00122c!2sAcordes%20Gastro%20Bar!5e1!3m2!1ses-419!2ssv!4v1753403274890!5m2!1ses-419!2ssv"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Acordes Gastro Bar. Todos los derechos reservados.</p>
-      <div class="footer-social">
-        <!-- Enlaces sociales repetidos para accesibilidad -->
-        <a href="https://wa.me/50379370883" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/acordesgastrobarsv/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61582104076843" target="_blank">Facebook</a>
-        <a href="https://www.tiktok.com/@acordesgastrobarsv?lang=es" target="_blank">TikTok</a>
+    <section class="menu-section">
+      <!-- Platos Section -->
+      <div class="card animated-menu">
+        <h2>De la Olla de Barro</h2>
+        <div id="platos-menu" class="menu-grid"></div>
       </div>
-    </footer>
 
-    <!-- Redes sociales flotantes con fondo negro -->
-    <style>
-      /* Estilos para hacer los iconos más visibles */
-      .social-float {
-        position: fixed;
-        right: 16px;
-        bottom: 18px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        z-index: 9999;
-        align-items: center;
-      }
-      .social-btn {
-        width: 56px;
-        height: 56px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        text-decoration: none;
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-        transition: transform 0.16s ease, box-shadow 0.16s ease;
-      }
-      .social-btn:hover {
-        transform: translateY(-4px) scale(1.06);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
-      }
-      .social-btn svg {
-        width: 48px;
-        height: 48px;
-        display: block;
-      }
-    </style>
+      <!-- Bebidas Section -->
+      <div class="card animated-menu">
+        <h2>Bebidas & Refrescos</h2>
+        <div id="bebidas-menu" class="menu-grid"></div>
+      </div>
+    </section>
 
-    <div class="social-float">
-      <a
-        href="https://wa.me/50379370883"
-        class="social-btn"
-        target="_blank"
-        title="WhatsApp"
-        aria-label="WhatsApp"
-        style="background: transparent"
-      >
-        <!-- WhatsApp SVG - fondo verde, icono blanco -->
-        <svg
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <circle cx="16" cy="16" r="16" fill="#25D366" />
-          <path
-            d="M16 7.2c-4.9 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5l-1.3 4.7 4.8-1.3c1.3.7 2.7 1.1 4.1 1.1 4.9 0 8.8-3.9 8.8-8.8S20.9 7.2 16 7.2zm0 15.8c-1.3 0-2.6-.3-3.7-.9l-.3-.2-2.8.8.8-2.7-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-4 3.3-7.3 7.3-7.3s7.3 3.3 7.3 7.3-3.3 7.3-7.3 7.3zm4-5.2c-.2-.1-1.2-.6-1.3-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.6.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.3 0-.4.2-.1.2-.5.5-.5 1.2 0 .7.5 1.4.6 1.5.1.1 1.1 1.7 2.7 2.3.4.2.7.3 1 .4.4.1.7.1 1 .1.3 0 .6-.1.7-.3.2-.2.5-.5.6-.7.1-.2.1-.3.1-.4 0-.1-.1-.2-.2-.3z"
-            fill="#fff"
-          />
-        </svg>
-      </a>
+    <!-- Eliminada Sección de Ubicación por solicitud (Delivery Only) -->
+  </main>
 
-      <a
-        href="https://www.instagram.com/acordesgastrobarsv/"
-        class="social-btn"
-        target="_blank"
-        title="Instagram"
-        aria-label="Instagram"
-        style="background: transparent"
-      >
-        <!-- Instagram SVG - fondo rosa/naranja para contraste -->
-        <svg
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <circle cx="16" cy="16" r="16" fill="#E1306C" />
-          <rect
-            x="8"
-            y="8"
-            width="16"
-            height="16"
-            rx="5"
-            fill="#E1306C"
-            opacity="0.0"
-          />
-          <rect x="10" y="10" width="12" height="12" rx="4" fill="#fff" />
-          <circle
-            cx="16"
-            cy="16"
-            r="3.5"
-            stroke="#E1306C"
-            stroke-width="2"
-            fill="none"
-          />
-          <circle cx="21.5" cy="10.5" r="1.5" fill="#E1306C" />
-        </svg>
-      </a>
-
-      <a
-        href="https://www.facebook.com/profile.php?id=61582104076843"
-        class="social-btn"
-        target="_blank"
-        title="Facebook"
-        aria-label="Facebook"
-        style="background: transparent"
-      >
-        <!-- Facebook SVG - azul oficial, icono blanco -->
-        <svg
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <circle cx="16" cy="16" r="16" fill="#1877F2" />
-          <path
-            d="M20 10h-2c-1.1 0-2 .9-2 2v1h4l-.5 3H16v8h-3v-8h-2v-3h2v-1.8C13 11.4 14.1 10 16.5 10 18 10 19.5 10 20 10z"
-            fill="#fff"
-          />
-        </svg>
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@acordesgastrobarsv?lang=es"
-        class="social-btn"
-        target="_blank"
-        title="TikTok"
-        aria-label="TikTok"
-        style="background: transparent"
-      >
-        <!-- TikTok SVG - fondo oscuro, icono con colores -->
-        <svg
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <circle cx="16" cy="16" r="16" fill="#000" />
-          <path
-            d="M22.5 13.5c-1.7 0-3-1.3-3-3V8h-2.2v10.2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4-.1-.6-.1-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4v-3.2c.6.4 1.3.7 2 .7h.6v-2.2h-.6z"
-            fill="#fff"
-          />
-          <path
-            d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z"
-            fill="#25F4EE"
-          />
-          <path
-            d="M19.5 8v2.5c0 1.7 1.3 3 3 3h.5v-2.2h-.5c-.4 0-.8-.4-.8-.8V8h-2.2z"
-            fill="#FE2C55"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </a>
+  <footer>
+    <div class="footer-content">
+      <h2>Síguenos en redes</h2>
+      <div class="footer-social-icons">
+        <a href="https://wa.me/50379370883" target="_blank" class="f-btn whatsapp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              fill="#fff" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/acordesgastrobarsv/" target="_blank" class="f-btn instagram"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              fill="#fff" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61582104076843" target="_blank" class="f-btn facebook"
+          aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              fill="#fff" />
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@acordesgastrobarsv?lang=es" target="_blank" class="f-btn tiktok"
+          aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.65-1.62-1.12-1.09 2.37-1.12 5.09-1.07 7.7.07 2.19-.07 4.41-1.02 6.44-1.72 3.86-7.25 5.86-10.96 3.19-1.94-1.39-2.92-3.8-2.5-6.14.39-2.22 2.17-4.14 4.38-4.7 1.3-.32 2.69-.33 4.02-.04.09.28.18.57.26.85-.92-.25-1.9-.3-2.84-.09-1.21.28-2.21 1.25-2.57 2.45-.66 2.05.57 4.29 2.6 4.9 2.33.72 5.03-.78 5.6-3.15.42-1.78.36-3.64.35-5.46V.02z"
+              fill="#fff" />
+          </svg>
+        </a>
+      </div>
     </div>
+    <p>&copy; 2026 Acordes Fire & Clay Kitchen. Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- Floating Social Buttons -->
+  <div class="social-float">
+    <a href="https://wa.me/50379370883" class="social-btn" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+          fill="#fff" />
+      </svg>
+    </a>
+
+    <a href="https://www.instagram.com/acordesgastrobarsv/" class="social-btn" target="_blank" title="Instagram"
+      aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+          fill="#fff" />
+      </svg>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61582104076843" class="social-btn" target="_blank" title="Facebook"
+      aria-label="Facebook">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+          fill="#fff" />
+      </svg>
+    </a>
+
+    <a href="https://www.tiktok.com/@acordesgastrobarsv?lang=es" class="social-btn" target="_blank" title="TikTok"
+      aria-label="TikTok">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.65-1.62-1.12-1.09 2.37-1.12 5.09-1.07 7.7.07 2.19-.07 4.41-1.02 6.44-1.72 3.86-7.25 5.86-10.96 3.19-1.94-1.39-2.92-3.8-2.5-6.14.39-2.22 2.17-4.14 4.38-4.7 1.3-.32 2.69-.33 4.02-.04.09.28.18.57.26.85-.92-.25-1.9-.3-2.84-.09-1.21.28-2.21 1.25-2.57 2.45-.66 2.05.57 4.29 2.6 4.9 2.33.72 5.03-.78 5.6-3.15.42-1.78.36-3.64.35-5.46V.02z"
+          fill="#fff" />
+      </svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

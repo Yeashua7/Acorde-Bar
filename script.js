@@ -1,10 +1,10 @@
 // Menú de Comida (Leña y Barro)
 const platos = [
-  { nombre: "Sopa de Gallina India", precio: "$6.00", descripcion: "Cocida en olla de barro con vegetales frescos." },
-  { nombre: "Carne Guisada", precio: "$5.50", descripcion: "Guiso especial de la casa cocinado a la leña." },
-  { nombre: "Costilla de Cerdo", precio: "$7.00", descripcion: "Ahumada a la leña con salsa barbacoa casera." },
-  { nombre: "Frijoles de la Olla", precio: "$4.00", descripcion: "Servidos con arroz, queso y tortillas a mano." },
-  { nombre: "Churrasco Típico", precio: "$8.00", descripcion: "Carne asada a la leña con chirmol y chorizo." },
+  { nombre: "Sopa de Gallina India", precio: 6.00, descripcion: "Cocida en olla de barro con vegetales frescos." },
+  { nombre: "Carne Guisada", precio: 5.50, descripcion: "Guiso especial de la casa cocinado a la leña." },
+  { nombre: "Costilla de Cerdo", precio: 7.00, descripcion: "Ahumada a la leña con salsa barbacoa casera." },
+  { nombre: "Frijoles de la Olla", precio: 4.00, descripcion: "Servidos con arroz, queso y tortillas a mano." },
+  { nombre: "Churrasco Típico", precio: 8.00, descripcion: "Carne asada a la leña con chirmol y chorizo." },
 ];
 
 // Lista de Bebidas
@@ -56,7 +56,7 @@ function mostrarPlatos() {
         <span class="item-nombre">${plato.nombre}</span>
         <small class="item-desc">${plato.descripcion || ''}</small>
       </div>
-      <span class="item-price">${plato.precio}</span>
+      <span class="item-price">$${plato.precio.toFixed(2)}</span>
     `;
 
     div.addEventListener('mouseenter', () => div.classList.add('active'));

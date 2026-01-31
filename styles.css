@@ -129,7 +129,7 @@ main {
   max-width: 500px;
   border: 1px solid var(--border-color);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; Removed to prevent cutting off content on mobile */
 }
 
 /* Decorate card header */

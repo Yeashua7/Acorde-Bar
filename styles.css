@@ -153,10 +153,11 @@ main {
 .menu-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(160, 82, 45, 0.3);
-  /* Subtle brown line */
+  align-items: flex-start;
+  /* Aligns price to top if text wraps */
+  padding: 1.2rem 1rem;
+  border-bottom: 1px dashed rgba(160, 82, 45, 0.4);
+  /* Dashed looks more like a menu */
   transition: background 0.3s;
 }
 
@@ -164,34 +165,64 @@ main {
   border-bottom: none;
 }
 
-.menu-item:hover {
-  background: rgba(232, 93, 4, 0.1);
+.menu-item:hover,
+.menu-item.active {
+  background: rgba(232, 93, 4, 0.15);
   border-radius: 8px;
 }
 
-.plato-info {
+.plato-info,
+.bebida-info {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  /* Takes all available space */
+  padding-right: 15px;
+  /* Spacing between text and price */
 }
 
 .item-nombre {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--highlight-color);
+  line-height: 1.2;
 }
 
 .item-desc {
   font-size: 0.95rem;
-  color: #aaa;
-  margin-top: 4px;
+  color: #ccc;
+  /* Slightly lighter for better contrast */
+  margin-top: 6px;
+  line-height: 1.4;
 }
 
 .item-price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
   color: var(--accent-color);
-  padding-left: 1rem;
   white-space: nowrap;
+  flex-shrink: 0;
+  /* Never shrink the price */
+}
+
+/* Mobile Specific Adjustments for Menu Items */
+@media (max-width: 480px) {
+  .menu-item {
+    padding: 1rem 0.5rem;
+    /* Less padding on small screens */
+  }
+
+  .item-nombre {
+    font-size: 1.1rem;
+  }
+
+  .item-desc {
+    font-size: 0.9rem;
+  }
+
+  .item-price {
+    font-size: 1.15rem;
+  }
 }
 
 /* Social Float - Fixed & Vertical */

@@ -21,19 +21,21 @@ const bebidas = [
 function mostrarBebidas() {
   const contenedor = document.getElementById('bebidas-menu');
   if (!contenedor) return;
-  
+
   bebidas.forEach(bebida => {
     const div = document.createElement('div');
     div.className = 'menu-item bebida-item';
     div.innerHTML = `
-      <span class="item-nombre">${bebida.nombre}</span>
+      <div class="bebida-info">
+        <span class="item-nombre">${bebida.nombre}</span>
+      </div>
       <span class="item-price">$${bebida.precio.toFixed(2)}</span>
     `;
     // Animación en hover/click
     div.addEventListener('mouseenter', () => div.classList.add('active'));
     div.addEventListener('mouseleave', () => div.classList.remove('active'));
     // Para móvil
-    div.addEventListener('touchstart', function(e) {
+    div.addEventListener('touchstart', function (e) {
       e.stopPropagation();
       document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
       div.classList.add('active');
@@ -56,10 +58,10 @@ function mostrarPlatos() {
       </div>
       <span class="item-price">${plato.precio}</span>
     `;
-    
+
     div.addEventListener('mouseenter', () => div.classList.add('active'));
     div.addEventListener('mouseleave', () => div.classList.remove('active'));
-    div.addEventListener('touchstart', function(e) {
+    div.addEventListener('touchstart', function (e) {
       e.stopPropagation();
       document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
       div.classList.add('active');
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarBebidas();
 
   // Cierra animación en móvil al tocar fuera
-  document.body.addEventListener('touchstart', function() {
+  document.body.addEventListener('touchstart', function () {
     document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
   });
 });
